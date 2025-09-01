@@ -1,0 +1,1400 @@
+/* ========================================== responsive css =============================================== */
+
+@media (max-width:1775px) {
+    .banner-dot-image {
+        right: 10%;
+        top: -10%;
+    }
+
+    .car-image {
+        left: 10%;
+        top: 50%;
+    }
+
+}
+
+@media (max-width:1599px) {
+    .banner-dot-image {
+        right: 7%;
+        top: -14%;
+    }
+
+    .lines-image {
+        top: 2%;
+        left: 25%;
+    }
+
+    /* learning section */
+    .learning-test img {
+        left: 16%;
+    }
+
+    .lerning-test {
+        left: 14%;
+    }
+
+}
+
+@media (max-width:1499px) {
+    .banner-dot-image {
+        right: 5%;
+        top: -10%;
+    }
+
+    .car-image {
+        left: 5%;
+        top: 50%;
+    }
+
+    .big-circle-image {
+        top: 32%;
+        left: 15%;
+    }
+
+    /* feature section */
+    .feature-card-white {
+        padding: 30px 15px 10px 20px;
+    }
+
+    /* learning section */
+    .lerning-test {
+        left: 13%;
+    }
+}
+
+@media (max-width:1436px) {
+    /* learning section */
+    .learning-test img {
+        left: 15%;
+    }
+
+    .lerning-test {
+        left: 11%;
+    }
+}
+
+@media (max-width:1399px) {
+    .banner-dot-image {
+        right: 0%;
+        top: -10%;
+    }
+
+    .car-image {
+        left: 5%;
+        top: 50%;
+    }
+
+    .big-circle-image {
+        top: 32%;
+        left: 15%;
+    }
+}
+
+
+
+@media (max-width:1299px) {
+    .banner-dot-image {
+        width: 25%;
+        right: 0%;
+        top: -10%;
+    }
+
+    .car-image {
+        left: 0%;
+        top: 50%;
+    }
+
+    .big-circle-image {
+        top: 32%;
+        left: 15%;
+    }
+
+    .lines-image {
+        top: 0%;
+        left: 17%;
+    }
+
+    .line-image {
+        top: 5%;
+        left: 37%;
+    }
+
+    .card-image {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .card-image .ellips-image {
+        width: 50px;
+        top: -15px;
+        left: -15px;
+    }
+
+    /* question bank page css */
+    .question-nav .nav-link.active::before {
+        bottom: -22px;
+        left: 48%;
+    }
+
+}
+
+@media (max-width:1199px) {
+    .heading-text h1 {
+        font-size: 40px;
+    }
+
+    .banner-dot-image {
+        width: 25%;
+        right: 0%;
+        top: -10%;
+    }
+
+    .car-image {
+        left: 0%;
+        top: 50%;
+    }
+
+    .big-circle-image {
+        top: 32%;
+        left: 9%;
+    }
+
+    .lines-image {
+        top: 0%;
+        left: 16%;
+    }
+
+    .line-image {
+        top: 5%;
+        left: 37%;
+    }
+
+    /* lerning section */
+    .learning-test img {
+        left: 13%;
+    }
+
+    .lerning-test {
+        left: 8%;
+    }
+
+    /* footer */
+    .footer-logo {
+        margin-bottom: 15px;
+    }
+
+    .footer-form {
+        width: 100%;
+    }
+
+    .information-info img {
+        right: 0;
+    }
+
+    .information-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:1175px) {
+    .dots-line-image {
+        bottom: -29%;
+        right: 9%;
+    }
+
+    /* leaning section */
+    .learning-test img {
+        left: 10%;
+    }
+
+    .lerning-test {
+        left: 5%;
+    }
+}
+
+@media (max-width:1167px) {
+    .banner-view .main-image {
+        width: 70%;
+    }
+
+    .dots-line-image {
+        width: 40%;
+        bottom: -30%;
+        right: 8%;
+    }
+}
+
+@media (max-width:1099px) {
+    .car-image {
+        width: 15%;
+    }
+
+    .lines-image {
+        width: 10%;
+    }
+
+    /* learning section */
+    .learning-test img {
+        width: 245px;
+        top: -6%;
+    }
+}
+
+@media (max-width:1020px) {
+    .heading-text h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:991px) {
+    .web-background .navbar-collapse {
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        background: white;
+        bottom: 0px;
+        max-width: 300px;
+        width: 100%;
+        height: 100%;
+        padding: 20px 30px;
+        z-index: 9999;
+        display: block;
+    }
+
+    .nav-close {
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--cs-sub-heading-color);
+        border-radius: 5px;
+        text-align: center;
+        color: var(--cs-sub-heading-color);
+        font-size: 20px;
+        line-height: 30px;
+        display: block;
+    }
+
+    .container {
+        padding: 0 15px 0 15px;
+    }
+
+    footer {
+        padding: 0 15px;
+    }
+
+    .web-background .nav .nav-item {
+        padding: 10px 10px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .btn-close:focus {
+        box-shadow: unset;
+    }
+
+    .web-background .nav .nav-item .nav-link.active {
+        position: relative;
+    }
+
+    .web-background .nav .nav-item .nav-link.active::after {
+        content: '';
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+    }
+
+    .web-background .nav .nav-item .nav-link::after {
+        content: '';
+    }
+
+    .navbar-light .navbar-toggler-icon {
+        display: block;
+    }
+
+    .web-background .nav {
+        padding: 20px 0;
+    }
+
+    .btn:focus {
+        box-shadow: unset;
+    }
+
+    .navbar-light .navbar-toggler {
+        font-size: 16px;
+    }
+
+    .web-background .nav-btn {
+        padding: 8px 10px;
+    }
+
+    .banner-background {
+        padding: 70px 20px;
+    }
+
+    .banner-view {
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    .banner-section .dot-image {
+        top: -54px;
+    }
+
+    .banner-view .main-image {
+        width: 50%;
+    }
+
+    .banner-dot-image {
+        width: 20%;
+        right: 11%;
+        top: -10%;
+    }
+
+    .line-image {
+        left: 40%;
+    }
+
+    .lines-image {
+        top: -3%;
+        left: 28%;
+    }
+
+    .big-circle-image {
+        left: 22%;
+    }
+
+    .car-image {
+        width: 10%;
+        left: 18%;
+    }
+
+    .dots-line-image {
+        width: 25%;
+        bottom: -27%;
+        right: 22%;
+    }
+
+    /* feature section */
+    .circle {
+        width: 80px;
+        height: 80px;
+        background-color: var(--cs-theme-color);
+        border: 1px solid transparent;
+        border-top-color: #1616163d;
+        border-left-color: #1616163d;
+        position: absolute;
+        right: -13px;
+        border-radius: 50%;
+        bottom: -13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
+
+    .circle-1 {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* learning section */
+    .licence-test {
+        padding: 0px 0;
+    }
+
+    .learning-test img {
+        left: 36%;
+        top: 10px;
+    }
+
+    .lerning-test {
+        left: 31%;
+    }
+
+    .licence-test-section {
+        padding-bottom: 60px;
+    }
+
+    .subheading {
+        margin-top: 80px;
+    }
+
+    .doted-image {
+        top: auto;
+        bottom: 0;
+    }
+
+    .card-image {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .card-image img {
+        width: 30px;
+    }
+
+    .card-image .ellips-image {
+        width: 45px;
+    }
+
+    /* footer */
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .copyright p {
+        margin-bottom: 10px;
+    }
+
+    /* question-bank section css */
+    /* banner section css */
+    .exam-test-content {
+        padding: 35px;
+    }
+
+    .exam-test-content img {
+        top: 9%;
+        left: 16%;
+    }
+
+    .card-body {
+        padding: 8px 20px;
+    }
+
+    .content-body {
+        padding: 10px 0;
+    }
+
+    .question-nav .nav-link,
+    .question-nav .nav-link.active {
+        width: 100%;
+        height: 65px;
+        border-radius: 12px;
+        padding: 0;
+        line-height: 65px;
+        font-size: 18px;
+    }
+
+    .sub-section {
+        padding-bottom: 70px;
+    }
+
+    .dropdown-menu.help-menubar {
+        display: block;
+        border: 1px solid rgba(22, 22, 22, 0.2);
+        border-radius: 8px;
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .menu-pills {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .contact-section {
+        padding-bottom: 50px;
+    }
+
+    .quiz-card-body {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width:875px) {
+    .lines-image {
+        width: 50px;
+        top: 2%;
+    }
+    /* question-bank section css */
+    /* banner section css */
+    .exam-test-content img {
+        left: 18%;
+    }
+}
+
+
+@media (max-width:767px) {
+    .lines-image {
+        width: 7%;
+        top: 4%;
+    }
+
+    .dots-line-image {
+        width: 25%;
+        bottom: -34%;
+        right: 25%;
+    }
+
+    .heading-text h1 {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .heading-text p {
+        color: #FFFFFFCC;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+    }
+
+    .heading-button a {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    /* learning section */
+    .learning-test img {
+        left: 34%;
+    }
+
+    .lerning-test {
+        display:none;
+    }
+
+    .subheading h1 {
+        font-size: 35px;
+    }
+
+    .card-img img {
+        position: absolute;
+        top: -12%;
+        right: 7%;
+    }
+
+    .learning-test img {
+        width: 232px;
+    }
+
+    .background-image {
+        width: 350px;
+    }
+
+    .learning-test img {
+        left: 37%;
+        top:10px;
+        width: 200px;
+    }
+
+    .doted-image {
+        top: auto;
+        bottom: 0;
+    }
+
+    /* footer */
+    .footer-section {
+        padding: 20px 0;
+    }
+
+    .footer-content p {
+        font-size: 14px;
+    }
+    .footer-nav {
+        margin-bottom: 0px;
+    }
+
+    .information-info input {
+        padding: 8px 12px;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .copyright p,
+    .privacy a {
+        font-size: 16px;
+    }
+
+    .information-info img {
+        width: 35px;
+        height: 40px;
+    }
+
+    .footer-social-media a {
+        font-size: 16px;
+    }
+
+    .information-info img {
+        right: -22px;
+    }
+
+    .sub-footer {
+        padding: 20px 0;
+    }
+
+    /* question-bank section css */
+    /* banner section css */
+    .exam-test-content {
+        padding: 25px;
+    }
+
+    .exam-test-content img {
+        top: 3%;
+        left: 20%;
+    }
+
+    .question-nav .nav-link,
+    .question-nav .nav-link.active {
+        width: 100%;
+        height: 55px;
+        border-radius: 12px;
+        padding: 0;
+        line-height: 55px;
+        font-size: 18px;
+    }
+
+    .exam-test-content h1 {
+        font-size: 25px;
+    }
+
+    .contact-section {
+        padding-bottom: 40px;
+    }
+
+    .information-info img {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .question-answer .click-answer {
+        margin: 10px 0;
+    }
+
+    .question-answer {
+        padding: 10px 0 10px 0;
+    }
+
+    .click-answer #check {
+        width: 25px;
+        height: 25px;
+    }
+
+    .click-with {
+        top: 1px;
+        left: 8px;
+    }
+
+    .quiz-card-body {
+        padding: 15px;
+    }
+
+    .quiz-section {
+        padding: 30px 30px 30px 30px;
+    }
+
+    .next-button .next {
+        font-size: 16px;
+        max-height: 45px;
+        height: 100%;
+    }
+
+    .question-dialog {
+        padding: 0 20px;
+    }
+
+    .failed-modal {
+        padding: 0;
+    }
+
+    .failed-image p {
+        font-size: 15px;
+    }
+
+    .failed-image .failed-text {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .failed-btn {
+        max-height: 40px;
+        height: 100%;
+        line-height: 40px;
+        font-size: 15px;
+    }
+
+    .circle-1 {
+        width: 54px;
+        height: 54px;
+    }
+
+    .circle-1 i {
+        font-size: 23px;
+    }
+
+}
+
+@media (max-width:675px) {
+    .banner-view {
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    .heading-button a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .banner-dot-image {
+        width: 20%;
+        right: 11%;
+        top: -10%;
+    }
+
+    .lines-image {
+        width: 35px;
+    }
+
+    .line-image {
+        width: 30px;
+    }
+
+    .big-circle-image {
+        width: 20px;
+    }
+
+    .car-image {
+        width: 10%;
+        left: 16%;
+        top: 57%;
+    }
+
+    /* learning section */
+    .learning-test img {
+        left: 36%;
+    }
+
+    .subheading h1 {
+        font-size: 30px;
+    }
+
+    .play-button {
+        width: 150px;
+        padding: 5px;
+    }
+
+    .play-button img {
+        width: 25px;
+    }
+
+    .card-img img {
+        position: absolute;
+        top: -15%;
+        right: 20%;
+    }
+
+    /* question-bank section css */
+    /* banner section css */
+    .exam-test-content h1 {
+        font-size: 25px;
+    }
+
+    .exam-test-content p {
+        font-size: 18px;
+    }
+
+    .exam-test-content img {
+        top: 6%;
+        left: 20%;
+    }
+
+    .question-nav .nav-link.active::before {
+        bottom: -22px;
+        left: 49%;
+    }
+
+    .traffic-sign-card .traffic-signs-info {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .exam-test-content p {
+        font-size: 16px;
+    }
+
+    .quiz-section .container {
+        padding: 15px 15px;
+    }
+
+    .quiz-section {
+        padding: 0px;
+    }
+
+    .next-question-btn {
+        padding: 20px 0 0 0;
+    }
+}
+
+@media (max-width:575px) {
+    .container {
+        padding: 12px 12px;
+    }
+
+    .web-background {
+        padding: 0px;
+    }
+
+    .heading-button a {
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+
+    .banner-dot-image {
+        width: 15%;
+        right: 20%;
+        top: -10%;
+    }
+
+    .banner-section .dot-image {
+        top: -44px;
+        width: 15px;
+    }
+
+    .banner-dot-image {
+        width: 20%;
+        right: 11%;
+        top: -10%;
+    }
+
+    .dots-line-image {
+        width: 30%;
+        bottom: -33%;
+        right: 18%;
+    }
+
+    /* feature section */
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .feature-card-body h4 {
+        font-size: 30px;
+    }
+
+    .feature-card-body p {
+        font-size: 16px;
+    }
+
+    .feature-section {
+        padding: 20px 0;
+    }
+
+    .learning-test img {
+        left: 30%;
+    }
+
+    .footer-social-media a {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .feature-section {
+        padding: 0px 0 8px;
+    }
+
+    /* question-bank section css */
+    /* banner section css */
+    .exam-test-content img {
+        left: 23%;
+    }
+
+    .exam-test-content p {
+        font-size: 15px;
+    }
+
+    .content-body p {
+        font-size: 16px;
+    }
+
+    .content-body .start-content {
+        max-width: 30px;
+        max-height: 30px;
+        height: 100%;
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .sub-section {
+        padding: 0px 0 40px 0;
+    }
+
+    .question-nav .nav-link,
+    .question-nav .nav-link.active {
+        width: 100%;
+        height: 55px;
+        border-radius: 12px;
+        padding: 0;
+        line-height: 55px;
+        font-size: 16px;
+    }
+
+    .question-nav .nav-link.active::after {
+        content: '';
+        position: absolute;
+        bottom: -25px;
+        left: 38%;
+        border-width: 35px 35px 0 35px;
+        border-style: solid;
+        border-color: #000000 transparent #fedf53 transparent;
+    }
+
+    .question-nav .nav-link.active::before {
+        bottom: -22px;
+        left: 42%;
+    }
+
+    .traffic-sign-card .traffic-signs-info {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .help-details {
+        padding: 0px 0;
+    }
+
+    .contact-section {
+        padding-bottom: 30px;
+    }
+
+    .accordion-flush .accordion-item .accordion-button {
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .form-body-details .application-form {
+        font-size: 14px;
+    }
+
+    .help-details .setting-form {
+        padding: 20px;
+    }
+
+    .help-details .start-form {
+        padding: 0 0 0px 0;
+    }
+
+    .help-details .setting-form {
+        padding: 15px;
+    }
+
+    .form-button {
+        padding: 10px 15px;
+    }
+
+    .menubar-item {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .setting-form .form-body {
+        padding: 15px;
+    }
+
+    .form-body-space {
+        padding: 10px 0;
+    }
+
+    .setting-form .form-details {
+        margin: 10px 0;
+        border: none;
+    }
+
+    .form-button::after {
+        max-width: 17px;
+        width: 100%;
+        background-size: 17px;
+    }
+
+    .form-body-details {
+        padding: 10px 0;
+    }
+
+    .information-info img {
+        border-radius: 0 7px 7px 0;
+    }
+
+    .question-tab-info::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .question-answer .click-answer {
+        margin: 8px 0;
+    }
+
+    .failed-btn {
+        font-size: 14px;
+    }
+
+    .failed-btn i {
+        font-size: 14px;
+        margin-right: 4px;
+    }
+
+    .text-center {
+        margin-bottom: 10px;
+    }
+
+    .failed-image p {
+        font-size: 14px;
+    }
+
+    .modal-close {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .start-exam a {
+        margin-top: 40px;
+    }
+
+    .start-exam a {
+        width: 80%;
+    }
+
+    .scorecard-header {
+        padding: 15px;
+    }
+
+    .tab-content {
+        margin-top: 20px;
+    }
+
+    .start-exam {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .scorecard-body {
+        padding: 10px 10px 0 10px;
+    }
+}
+
+@media (max-width:475px) {
+    .heading-text h1 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .banner-view .main-image {
+        width: 60%;
+    }
+
+    .big-circle-image {
+        left: 14%;
+    }
+
+    .car-image {
+        width: 12%;
+        left: 8%;
+        top: 57%;
+    }
+
+    .lines-image {
+        top: 5%;
+        left: 21%;
+    }
+
+    .line-image {
+        left: 37%;
+    }
+
+    .banner-section .dot-image {
+        top: -32px;
+    }
+
+    .heading-text p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .learning-test img {
+        left: 26%;
+    }
+
+    .card-img img {
+        width: 35px;
+        position: absolute;
+        top: -11%;
+        right: 20%;
+    }
+
+    .learning-test img {
+        left: 24%;
+    }
+
+    .subheading h1 {
+        font-size: 25px;
+    }
+
+    .card-img img {
+        width: 35px;
+        position: absolute;
+        top: -12%;
+        right: 33%;
+    }
+
+    .licence-test-section {
+        margin: 9px 0;
+        padding: 20px;
+    }
+
+    .question-nav .nav-link,
+    .question-nav .nav-link.active {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    .easy-to-use .card-text {
+        font-size: 14px;
+    }
+
+    .quiz-time {
+        width: 30px;
+        height: 30px;
+        border: 2px solid var(--theme-color);
+        line-height: 29px;
+        font-size: 10px;
+    }
+
+    .scroll-up {
+        width: 35px;
+        height: 35px;
+        bottom: 30px;
+        right: 30px;
+        line-height: 35px;
+        font-size: 15px;
+    }
+
+    .card-image img {
+        width: 35px;
+    }
+}
+
+@media (max-width:465px) {
+    .start-exam a {
+        border-radius: 8px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width:430px) {
+    .learning-test img {
+        left: 22%;
+    }
+
+    .question-nav .nav-link.active::before {
+        bottom: -22px;
+        left: 44%;
+        border-width: 20px 20px 0 20px;
+    }
+
+    .question-nav .nav-link.active::after {
+        bottom: -25px;
+        left: 38%;
+        border-width: 30px 30px 0 30px
+    }
+}
+
+
+
+@media (max-width:375px) {
+    .banner-background {
+        padding: 50px 15px;
+    }
+
+    /* learning section */
+    .play-button {
+        padding: 5px;
+    }
+
+    .btn h4 {
+        font-size: 16px;
+    }
+
+    .learning-test img {
+        width: 177px;
+    }
+
+    .card-img img {
+        top: -9%;
+        right: 22%;
+    }
+
+    .button-space {
+        margin-left: 0;
+    }
+
+    .subheading {
+        margin-top: 83px;
+    }
+
+    /* footer */
+    .copyright p,
+    .privacy a {
+        font-size: 14px;
+    }
+
+    /* question-bank section css */
+    /* banner section css */
+    .exam-test-content img {
+        left: 36%;
+    }
+
+    .content-body p {
+        font-size: 14px;
+    }
+
+    .card-body {
+        padding: 5px 15px;
+    }
+
+    .sub-section {
+        padding: 0px 0 30px 0;
+    }
+
+    .contact-section {
+        padding-bottom: 20px;
+    }
+
+    .quiz-card-body {
+        padding: 15px;
+    }
+
+    .question-number .display-number {
+        font-size: 15px;
+    }
+
+    .true-false-btn .true-btn,
+    .true-false-btn .false-btn {
+        width: 70px;
+    }
+
+    .true-false-btn .false-btn {
+        margin-left: 5px;
+    }
+
+    .next-button .next {
+        max-height: 40px;
+        height: 40px;
+        line-height: 18px;
+    }
+
+    .next-button .next i {
+        font-size: 15px;
+    }
+
+    .next-question-btn {
+        padding: 15px 0 0 0;
+    }
+
+    .true-false-btn .true-btn,
+    .true-false-btn .false-btn {
+        width: 60px;
+        padding: 2px 10px;
+    }
+
+    .failed-btn {
+        font-size: 11px;
+    }
+}
+
+@media (max-width:350px) {
+    .banner-dot-image {
+        right: 8%;
+    }
+
+    .lines-image {
+        top: -1%;
+        left: 20%;
+    }
+
+    .line-image {
+        width: 25px;
+        left: 37%;
+    }
+
+    .big-circle-image {
+        width: 19px;
+        left: 11%;
+    }
+
+    .feature-card-body h4 {
+        font-size: 25px;
+    }
+
+    /* learning section */
+    .learning-test img {
+        left: 19%;
+        top: -3%;
+    }
+
+    .card-img img {
+        top: -9%;
+        right: 16%;
+    }
+
+}
+
+@media (max-width:330px) {
+    /* question-bank section css */
+    /* banner section css */
+    .exam-test-content img {
+        left: 41%;
+    }
+
+    .copyright {
+        padding: 0 15px;
+    }
+
+    .exam-datail-space {
+        padding: 10px 0;
+    }
+
+    .start-exam a {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width:329px) {
+    .exam-datail-space {
+        padding: 10px 0;
+    }
+
+    .start-exam a {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width:320px) {
+    .card-image img {
+        width: 30px;
+    }
+
+    .question-nav .nav-link.active::before {
+        bottom: -22px;
+        left: 40%;
+        border-width: 20px 20px 0 20px;
+    }
+
+    .question-nav .nav-link.active::after {
+        bottom: -25px;
+        left: 33%;
+        border-width: 30px 30px 0 30px;
+    }
+
+    .traffic-content-space {
+        margin-left: 10px;
+    }
+
+}

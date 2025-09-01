@@ -1,0 +1,24 @@
+<?php
+
+use App\Http\Controllers\ExamController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\QuestionbankController;
+use App\Http\Controllers\SettingController;
+use Illuminate\Support\Facades\Route;
+
+    Route::controller(HomeController::class)->group(function () {
+        Route::get('/', 'view')->name('home');
+    });
+
+    Route::controller(ExamController::class)->group(function () {
+        Route::get('/exam', 'view')->name('exam');
+    });
+
+    Route::controller(QuestionbankController::class)->group(function () {
+        Route::get('/questionbank', 'view')->name('questionbank');
+    });
+
+    Route::controller(SettingController::class)->group(function () {
+        Route::get('/setting', 'view')->name('setting');
+    });
+
