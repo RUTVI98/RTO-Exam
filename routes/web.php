@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\ExamController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\QuestionbankController;
-use App\Http\Controllers\SettingController;
+use App\Http\Controllers\web\ExamController;
+use App\Http\Controllers\web\HomeController;
+use App\Http\Controllers\web\QuestionbankController;
+use App\Http\Controllers\web\SettingController;
 use Illuminate\Support\Facades\Route;
 
     Route::controller(HomeController::class)->group(function () {
