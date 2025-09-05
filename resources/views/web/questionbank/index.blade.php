@@ -80,7 +80,8 @@
 
                 $.ajax({
                     url: "{{ route('loadQuestions') }}",
-                    method: "GET",
+                    method: "POST",
+                    headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
                     data: { offset: offsetQ, lang: language },
                     dataType: "json",
                     beforeSend: function () { loadingQ = true; },
@@ -108,7 +109,8 @@
 
                 $.ajax({
                     url: "{{ route('loadSigns') }}",
-                    method: "GET",
+                    method: "POST",
+                    headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
                     data: { offset: offsetS, lang: language },
                     dataType: "json",
                     beforeSend: function () { loadingS = true; },
@@ -126,7 +128,7 @@
                     },
                     error: function (xhr, status, error) {
                         console.error("Error:", error);
-                        loading = false;
+                        loadingS = false;
                     }
                 });
             }

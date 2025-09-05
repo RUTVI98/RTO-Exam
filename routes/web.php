@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 
     Route::controller(QuestionbankController::class)->group(function () {
         Route::get('/questionbank', 'view')->name('questionbank');
-        Route::get('/load_questions', 'loadQuestions')->name('loadQuestions');
-        Route::get('/load_signs', 'loadSigns')->name('loadSigns');
+        Route::post('/load_questions', 'loadQuestions')->name('loadQuestions');
+        Route::post('/load_signs', 'loadSigns')->name('loadSigns');
     });
 
     Route::controller(SettingController::class)->group(function () {
