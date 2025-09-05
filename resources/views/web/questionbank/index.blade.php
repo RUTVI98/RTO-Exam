@@ -40,6 +40,9 @@
                             aria-labelledby="home-tab">
                             <div class="scroll-container" style="height:800px; overflow-y:auto; ">
                                 <div class="row g-4" id="questionContainer">
+                                    <div id="noDataMsg" class="col-12 text-center my-3 text-muted">
+                                        <i>No data available. Start scrolling to load questions.</i>
+                                    </div>
                                     <!-- Questions will be loaded dynamically here -->
                                 </div>
                             </div>
@@ -49,6 +52,9 @@
                             aria-labelledby="profile-tab">
                             <div class="scroll-container-signs" style="height:800px; overflow-y:auto;">
                                 <div class="row g-4" id="signsContainer">
+                                    <div id="noDataMsgSigns" class="col-12 text-center my-3 text-muted">
+                                        <i>No data available. Start scrolling to load signs.</i>
+                                    </div>
                                     <!-- Signs will be loaded dynamically here -->
                                 </div>
                             </div>
@@ -87,13 +93,18 @@
                     beforeSend: function () { loadingQ = true; },
                     success: function (res) {
                         if (res.count > 0) {
+                            $("#noDataMsg").remove(); // Remove placeholder
                             $("#questionContainer").append(res.html);
                             offsetQ += res.count;
                         } else {
                             endReachedQ = true;
-                            $("#questionContainer").append(
-                                '<div class="col-12 text-center my-3"><i>No more questions available.</i></div>'
-                            );
+                            const noMoreMsg = $('<div class="col-12 text-center my-3 no-more-msg"><i>No more questions available.</i></div>');
+                            $("#questionContainer").append(noMoreMsg);
+
+                            setTimeout(function () {
+                                noMoreMsg.fadeOut(500);
+                            }, 2000);
+
                         }
                         loadingQ = false;
                     },
@@ -116,13 +127,17 @@
                     beforeSend: function () { loadingS = true; },
                     success: function (res) {
                         if (res.count > 0) {
+                            $("#noDataMsgSigns").remove();
                             $("#signsContainer").append(res.html);
                             offsetS += res.count;
                         } else {
                             endReachedS = true;
-                            $("#signsContainer").append(
-                                '<div class="col-12 text-center my-3"><i>No more signs available.</i></div>'
-                            );
+                            const noMoreMsg = $('<div class="col-12 text-center my-3 no-more-msg"><i>No more signs available.</i></div>');
+                            $("#signsContainer").append(noMoreMsg);
+
+                            setTimeout(function () {
+                                noMoreMsg.fadeOut(500);
+                            }, 2000);
                         }
                         loadingS = false;
                     },
