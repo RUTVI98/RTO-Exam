@@ -40,9 +40,6 @@
                             aria-labelledby="home-tab">
                             <div class="scroll-container" style="height:800px; overflow-y:auto; ">
                                 <div class="row g-4" id="questionContainer">
-                                    <div id="noDataMsg" class="col-12 text-center my-3 text-muted">
-                                        <i>No data available. Start scrolling to load questions.</i>
-                                    </div>
                                     <!-- Questions will be loaded dynamically here -->
                                 </div>
                             </div>
@@ -52,9 +49,6 @@
                             aria-labelledby="profile-tab">
                             <div class="scroll-container-signs" style="height:800px; overflow-y:auto;">
                                 <div class="row g-4" id="signsContainer">
-                                    <div id="noDataMsgSigns" class="col-12 text-center my-3 text-muted">
-                                        <i>No data available. Start scrolling to load signs.</i>
-                                    </div>
                                     <!-- Signs will be loaded dynamically here -->
                                 </div>
                             </div>
