@@ -38,7 +38,7 @@
                     <div class="tab-content question-tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active question-tab-info" id="home" role="tabpanel"
                             aria-labelledby="home-tab">
-                            <div class="scroll-container" style="height:800px; overflow-y:auto; ">
+                            <div class="scroll-container" style="height:650px; overflow-y:auto; ">
                                 <div class="row g-4" id="questionContainer">
                                     <!-- Questions will be loaded dynamically here -->
                                 </div>
@@ -47,7 +47,7 @@
 
                         <div class="tab-pane traffic-sign-tab fade" id="profile" role="tabpanel"
                             aria-labelledby="profile-tab">
-                            <div class="scroll-container-signs" style="height:800px; overflow-y:auto;">
+                            <div class="scroll-container-signs" style="height:605px; overflow-y:auto;">
                                 <div class="row g-4" id="signsContainer">
                                     <!-- Signs will be loaded dynamically here -->
                                 </div>

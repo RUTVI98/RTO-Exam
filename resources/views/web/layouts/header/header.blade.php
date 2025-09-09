@@ -35,7 +35,7 @@
                         <div class="language ">
                             <select id="langselect" class="form-select" style="width: 100%;">
                                 <option value="eng">English</option>
-                                <option value="guj">Gujrati</option>
+                                <option value="guj">ગુજરાતી</option>
                             </select>
                         </div>
                 </div>
