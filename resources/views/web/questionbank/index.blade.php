@@ -157,7 +157,7 @@
             // Scroll for signs
             $(".scroll-container-signs").on("scroll", function () {
                 let $this = $(this);
-                if ($this.scrollTop() + $this.innerHeight() >= this.scrollHeight - 30) {
+                if ($this.scrollTop() + $this.innerHeight() >= this.scrollHeight - 70) {
                     loadSigns();
                 }
             });
