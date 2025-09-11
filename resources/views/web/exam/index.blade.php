@@ -19,6 +19,37 @@
     </section>
     <!-- online exam section end -->
 
+    <!-- exam model box start -->
+    <section class="start-section"><br><br>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6 mx-auto">
+                    <div class="quiz-content-info">
+                        <div class="card quiz-card">
+                            <div class="card-body quiz-card-body">
+                                <div class="easy-to-use d-flex align-items-center center text-center">
+                                    <div style="max-width: 420px;" class="text-start">
+                                        <h4 class="mb-3 fw-700">Instructions</h4>
+                                        <p class="fw-500 mb-3">Subject like Rules and Regulations of traffic, and traffic
+                                            signle's are included in the test.</p>
+                                        <p class="fw-500 mb-3">15 questions are asked in the test at random, out of which 11
+                                            questions are required to be answered correctly to pass the test.</p>
+                                        <p class="fw-500 mb-3">30 seconds are allowed to answer each
+                                            question.</p>
+                                        <a class="r-submit w-100 text-center fw-300" href="javascript:void(0)"
+                                            id="start-exam"><b>Start Exam</b></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card quiz-card card-position"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br>
+    <!-- exam model box end -->
+
 
     <!-- quiz section start -->
     <section class="quiz-section">
@@ -111,7 +142,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="next-button text-center mt-4 pt-2">
-                                <a type="submit" form='question-answer' class="next" id="next">Next
+                                <a type="submit" class="next" id="next">Next
                                     <i class="fa-solid fa-chevron-right"></i></a>
                             </div>
                         </div>
@@ -138,29 +169,20 @@
                                         <h2 class="card-text" id="failed-text">Failed </h2>
                                         <p class="card-text" id="correct_answer">Correct Answers: </p>
                                         <p class="card-text" id="wrong_answer">Wrong Answers: </p>
-                                    
-                                        <div class="d-flex align-items-center justify-content-center gap-3 flex-column flex-ms-row">
-                                            <a class="r-submit w-100 text-center fw-300" href="#">Home</a>
-                                            <a class="r-submit w-100 text-center fw-300" href="#">ScoreBoard</a>
+
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-3 flex-column flex-ms-row">
+                                            <a class="r-submit w-100 text-center fw-300" href="{{route('home')}}">Home</a>
+                                            <a class="r-submit w-100 text-center fw-300" href="#"
+                                                id="show-scoreboard">ScoreBoard</a>
+                                            <a class="r-submit w-100 text-center fw-300" href="{{ route('exam') }}">Retake
+                                                Exam</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card quiz-card card-position"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="next-question-btn">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-6">
-
-                        <div
-                            class="d-flex align-items-center justify-content-center flex-column flex-ms-row next-button gap-3">
-                            <a href="#" class="next text-center">
-                                <p class="mb-0">Retake Exam </p> <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -209,8 +231,8 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-6 mt-4">
                     <div class="d-flex align-items-center flex-column flex-ms-row justify-content-center gap-3">
-                        <a class="r-submit fw-300" href="#">Home</a>
-                        <a class="r-submit fw-300" href="#">Try Again</a>
+                        <a class="r-submit fw-300" href="{{ route('home') }}">Home</a>
+                        <a class="r-submit fw-300" href="{{ route('exam') }}">Try Again</a><br>
                     </div>
                 </div>
             </div>
@@ -230,9 +252,12 @@
             let timeleft = 30;
             let correctCount = 0;
             let wrongCount = 0;
+            let scoreboardData = [];
 
             $(".quiz-card[data-correct]").hide();
             $(".quiz-card[data-correct]").eq(currentIndex).show();
+            $(".ScoreBoard-section").hide();
+            $(".quiz-section").hide();
 
             function updateTimer() {
                 $("#timer-" + currentIndex).text(timeleft + "s");
@@ -264,6 +289,15 @@
 
                 currentCard.find(".errorExam").hide();
 
+                let questionText = currentCard.find(".card-text").first().text();
+                let img = currentCard.find("img").attr("src") || "";
+                scoreboardData.push({
+                    question: questionText,
+                    correct: correctAnswer,
+                    user: selected ? selected : "Not Answered",
+                    image: img
+                });
+
                 // evaluate answer
                 if (selected == correctAnswer) {
                     correctCount++;
@@ -287,11 +321,13 @@
                 } else {
                     // Exam finished
                     $(".quiz-section").hide();
-                    $(".result-section").show(); // show your result section
+                    $(".result-section").show();
+                    $(".ScoreBoard-section").hide();
+
                     $("#correct_answer").text("Correct Answers: " + correctCount);
                     $("#wrong_answer").text("Wrong Answers: " + wrongCount);
 
-                    if (correctCount >= (totalQuestions / 2)) {
+                    if (correctCount >= 11) {
                         $("#passed-text").show();
                         $("#failed-text").hide();
                     } else {
@@ -300,6 +336,67 @@
                     }
                 }
             }
+
+            $("#show-scoreboard").on("click", function (e) {
+                e.preventDefault();
+                $(".result-section, .quiz-section, .question-section").hide();
+                $(".ScoreBoard-section").show();
+
+                let sbContainer = $("#scoreboard-text").empty();
+
+
+                scoreboardData.forEach((item, index) => {
+                    let icon, colorClass;
+
+                    if (item.user === "Not Answered") {
+                        icon = "❓";        // not answered
+                        colorClass = "text-warning";
+                    } else if (item.user === item.correct) {
+                        icon = "✅";        // correct
+                        colorClass = "text-success";
+                    } else {
+                        icon = "❌";        // wrong
+                        colorClass = "text-danger";
+                    }
+
+                    sbContainer.append(`
+                    <div class="mb-3">
+                        <p><span class="fw-bold">${icon}</span><b>${item.question}</b>
+                        ${item.image ? `<img src="${item.image}" alt="Q Image" class="my-2" style="max-width:100px;max-height:100px;"><br>` : ""}</p>
+                        <p><span class="text-success"><b>Correct Answer: ${item.correct}</span></p></b>
+                        <p><span class="${colorClass}"><b>Your Answer: ${item.user}</span></p></b>
+                        <hr style="color:blue">
+                    </div>
+                `);
+                });
+            });
+
+            $("#start-exam").on("click", function (e) {
+                e.preventDefault();
+
+                // hide instructions
+                $(".start-section").hide();
+
+                // show quiz
+                $(".quiz-section").show();
+
+                // reset values (optional, in case of retry)
+                currentIndex = 0;
+                correctCount = 0;
+                wrongCount = 0;
+
+                $(".true-answer-counter").text(0);
+                $(".wrong-answer-counter").text(0);
+
+                $("input[type=radio]").prop("checked", false);
+
+                // show first question
+                $(".quiz-card[data-correct]").hide();
+                $(".quiz-card[data-correct]").eq(currentIndex).show();
+
+                // start timer
+                startTimer();
+            });
 
             // when user selects an option -> clear error
             $("input[type=radio]").on("change", function () {
@@ -314,13 +411,6 @@
 
             // hide result section initially
             $(".result-section").hide();
-
-            startTimer();
-
-            // $("#langselect").on("change", function () {
-            //     language = $(this).val();
-
-            // });
 
         });
     </script>
