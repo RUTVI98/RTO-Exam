@@ -10,8 +10,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="exam-test-content exam-change-position">
-                        <h1 class="theme-color-fff">Online Driving Licence Computer Test Exam - RTO Exam</h1>
-                        <p class="fs-20px fw-300 mb-0">Time and question bound test exactly same as actual RTO test</p>
+                        <h1 class="theme-color-fff">{{ __('exam.exam_title') }}</h1>
+                        <p class="fs-20px fw-300 mb-0">{{ __('exam.exam_subtitle') }}</p>
                     </div>
                 </div>
             </div>
@@ -29,15 +29,14 @@
                             <div class="card-body quiz-card-body">
                                 <div class="easy-to-use d-flex align-items-center center text-center">
                                     <div style="max-width: 420px;" class="text-start">
-                                        <h4 class="mb-3 fw-700">Instructions</h4>
-                                        <p class="fw-500 mb-3">Subject like Rules and Regulations of traffic, and traffic
-                                            signle's are included in the test.</p>
-                                        <p class="fw-500 mb-3">15 questions are asked in the test at random, out of which 11
-                                            questions are required to be answered correctly to pass the test.</p>
-                                        <p class="fw-500 mb-3">30 seconds are allowed to answer each
-                                            question.</p>
+                                        <h4 class="mb-3 fw-700">{{ __('exam.instructions') }}</h4>
+                                        <p class="fw-500 mb-3">{{ __('exam.rule_text') }}</p>
+                                        <p class="fw-500 mb-3">{{ __('exam.question_text') }}</p>
+                                        <p class="fw-500 mb-3">{{ __('exam.time_text') }}</p>
                                         <a class="r-submit w-100 text-center fw-300" href="javascript:void(0)"
-                                            id="start-exam"><b>Start Exam</b></a>
+                                            id="start-exam">
+                                            <b>{{ __('exam.start_button') }}</b>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -110,12 +109,12 @@
                                         </label>
 
 
-                                        <div class="errorExam my-2" style="display:none"> You Have Not Select The Answer
+                                        <div class="errorExam my-2" style="display:none"> {{ __('exam.not_selected') }}
                                         </div>
 
                                         <div class="question-number d-flex align-items-center justify-content-between">
                                             <p class="display-number mb-0 theme-color-161616 fw-600">
-                                                Question {{ $loop->iteration }}/{{ $questions->count() }}</p>
+                                                {{ __('exam.question') }} {{ $loop->iteration }}/{{ $questions->count() }}</p>
 
                                             <div class="true-false-btn gap-2 d-flex">
                                                 <a class="true-btn d-flex justify-content-between" data-bs-toggle="modal"
@@ -142,8 +141,9 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="next-button text-center mt-4 pt-2">
-                                <a type="submit" class="next" id="next">Next
-                                    <i class="fa-solid fa-chevron-right"></i></a>
+                                <a type="submit" class="next" id="next">
+                                {{ __('exam.next_button') }}
+                                <i class="fa-solid fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -164,19 +164,18 @@
                             <div class="card-body quiz-card-body">
                                 <div class="easy-to-use d-flex align-items-center center">
                                     <div>
-                                        <p class="card-text" id="result-text"> Exam is Successfully Completed. </p>
-                                        <h2 class="card-text" id="passed-text">Passed</h2>
-                                        <h2 class="card-text" id="failed-text">Failed </h2>
-                                        <p class="card-text" id="correct_answer">Correct Answers: </p>
-                                        <p class="card-text" id="wrong_answer">Wrong Answers: </p>
+                                        <p class="card-text" id="result-text"> {{ __('exam.result_completed') }} </p>
+                                        <h2 class="card-text" id="passed-text">{{ __('exam.passed') }}</h2>
+                                        <h2 class="card-text" id="failed-text">{{ __('exam.failed') }}</h2>
+                                        <p class="card-text" id="correct_answer">{{ __('exam.correct_answers') }}</p>
+                                        <p class="card-text" id="wrong_answer">{{ __('exam.wrong_answers') }}</p>
 
                                         <div
                                             class="d-flex align-items-center justify-content-center gap-3 flex-column flex-ms-row">
-                                            <a class="r-submit w-100 text-center fw-300" href="{{route('home')}}">Home</a>
+                                            <a class="r-submit w-100 text-center fw-300" href="{{route('home')}}">{{ __('exam.home') }}</a>
                                             <a class="r-submit w-100 text-center fw-300" href="#"
-                                                id="show-scoreboard">ScoreBoard</a>
-                                            <a class="r-submit w-100 text-center fw-300" href="{{ route('exam') }}">Retake
-                                                Exam</a>
+                                                id="show-scoreboard">{{ __('exam.scoreboard') }}</a>
+                                            <a class="r-submit w-100 text-center fw-300" href="{{ route('exam') }}">{{ __('exam.retake_exam') }}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -197,9 +196,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="exam-test-content exam-change-position ScoreBoard-main">
-                        <h1 class="theme-color-fff">ScoreBoard</h1>
+                        <h1 class="theme-color-fff">{{ __('exam.scoreboard') }}</h1>
                         <!-- <img src="assets/image/rto-banner-image.png" alt="rto-banner-image" class="img-fluid"> -->
-                        <p class="fs-20px fw-300 mb-0">Time and question bound test exactly same as actual RTO test</p>
+                        <p class="fs-20px fw-300 mb-0">{{ __('exam.time_bound_test') }}</p>
                     </div>
                 </div>
             </div>
@@ -216,10 +215,10 @@
                             <div class="card-body quiz-card-body">
                                 <div class="easy-to-use d-flex align-items-center">
                                     <div class="scoreboard-text" id="scoreboard-text">
-                                        <p class="card-text" id="que-text"> </p>
-                                        <p class="img-text" id="img-text"> </p>
-                                        <p class="card-text" id="CAns-text"> </p>
-                                        <p class="card-text" id="UAns-text"> </p>
+                                        <p class="card-text" id="que-text"></p>
+                                        <p class="img-text" id="img-text"></p>
+                                        <p class="card-text" id="CAns-text"></p>
+                                        <p class="card-text" id="UAns-text"></p>
                                     </div>
                                 </div>
                             </div>
@@ -231,8 +230,8 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-6 mt-4">
                     <div class="d-flex align-items-center flex-column flex-ms-row justify-content-center gap-3">
-                        <a class="r-submit fw-300" href="{{ route('home') }}">Home</a>
-                        <a class="r-submit fw-300" href="{{ route('exam') }}">Try Again</a><br>
+                        <a class="r-submit fw-300" href="{{ route('home') }}">{{ __('exam.home') }}</a>
+                        <a class="r-submit fw-300" href="{{ route('exam') }}">{{ __('exam.try_again') }}</a><br>
                     </div>
                 </div>
             </div>
@@ -249,7 +248,7 @@
             let currentIndex = 0;
             let totalQuestions = $(".quiz-card[data-correct]").length;
             let timer;
-            let timeleft = 30;
+            let timeleft = 2;
             let correctCount = 0;
             let wrongCount = 0;
             let scoreboardData = [];
@@ -264,7 +263,7 @@
             }
 
             function startTimer() {
-                timeleft = 2;
+                timeleft = 30;
                 updateTimer();
                 timer = setInterval(function () {
                     timeleft--;
@@ -337,7 +336,7 @@
                 }
             }
 
-            $("#show-scoreboard").on("click", function (e) {
+            $(document).on("click","#show-scoreboard", function (e) {
                 e.preventDefault();
                 $(".result-section, .quiz-section, .question-section").hide();
                 $(".ScoreBoard-section").show();
@@ -360,18 +359,18 @@
                     }
 
                     sbContainer.append(`
-                    <div class="mb-3">
-                        <p><span class="fw-bold">${icon}</span><b>${item.question}</b>
-                        ${item.image ? `<img src="${item.image}" alt="Q Image" class="my-2" style="max-width:100px;max-height:100px;"><br>` : ""}</p>
-                        <p><span class="text-success"><b>Correct Answer: ${item.correct}</span></p></b>
-                        <p><span class="${colorClass}"><b>Your Answer: ${item.user}</span></p></b>
-                        <hr style="color:blue">
-                    </div>
-                `);
+                        <div class="mb-3">
+                            <p><span class="fw-bold">${icon}</span><b>${item.question}</b>
+                            ${item.image ? `<img src="${item.image}" alt="Q Image" class="my-2" style="max-width:100px;max-height:100px;"><br>` : ""}</p>
+                            <p><span class="text-success"><b>{{ __('exam.correct_answer') }}: ${item.correct}</span></p></b>
+                            <p><span class="${colorClass}"><b>{{ __('exam.your_answer') }}: ${item.user}</span></p></b>
+                            <hr style="color:blue">
+                        </div>
+                    `);
                 });
             });
 
-            $("#start-exam").on("click", function (e) {
+            $(document).on("click", "#start-exam", function (e) {
                 e.preventDefault();
 
                 // hide instructions
@@ -399,12 +398,12 @@
             });
 
             // when user selects an option -> clear error
-            $("input[type=radio]").on("change", function () {
+            $(document).on("change", ".quiz-section input[type=radio]", function () {
                 $(".errorExam").hide();
             });
 
             // Next button
-            $("#next").on("click", function (e) {
+            $(document).on("click", "#next", function (e) {
                 e.preventDefault();
                 checkAnswer();
             });
@@ -412,6 +411,47 @@
             // hide result section initially
             $(".result-section").hide();
 
+            $("#langselect").on("change", function () {
+                let language = $(this).val();
+
+                $.ajax({
+                    url: "{{ route('exam') }}",
+                    data: { lang: language },
+                    success: function (response) {
+
+                        // Replace the old quiz HTML with the new one from response
+                        $(".quiz-section").html($(response).find(".quiz-section").html());
+                        $(".start-section").html($(response).find(".start-section").html());
+                        $(".question-section").html($(response).find(".question-section").html());
+                        $(".result-section").html($(response).find(".result-section").html());
+                        $(".ScoreBoard-section").html($(response).find(".ScoreBoard-section").html());
+
+                        
+                        $(".quiz-section").hide();
+                        $(".start-section").show();
+                        $(".ScoreBoard-section").hide();
+                        $(".result-section").hide();
+
+                        currentIndex = 0;
+                        correctCount = 0;
+                        wrongCount = 0;
+                        scoreboardData = [];
+
+                        $("#scoreboard-text").empty();
+
+                        $(".true-answer-counter").text(0);
+                        $(".wrong-answer-counter").text(0);
+
+                        $("input[type=radio]").prop("checked", false);
+
+                        $(".quiz-card[data-correct]").hide();
+                        $(".quiz-card[data-correct]").eq(currentIndex).show();
+
+
+                    }
+                });
+            });
         });
+
     </script>
 @endpush

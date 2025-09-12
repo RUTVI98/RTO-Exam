@@ -6,6 +6,7 @@ use App\Http\Controllers\web\QuestionbankController;
 use App\Http\Controllers\web\SettingController;
 use Illuminate\Support\Facades\Route;
 
+Route::middleware('lang')->group(function () {
     Route::controller(HomeController::class)->group(function () {
         Route::get('/', 'view')->name('home');
     });
@@ -24,3 +25,4 @@ use Illuminate\Support\Facades\Route;
         Route::get('/setting', 'view')->name('setting');
     });
 
+});
