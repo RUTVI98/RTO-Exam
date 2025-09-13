@@ -10,16 +10,8 @@
                                 <img src="assets/image/footer-logo.png" alt="footer-logo" class="img-fluid">
                             </div>
                             <p class="my-3 my-lg-4 theme-color-fff fs-18px fw-300"><b
-                                    style="color: #fedf53;">Disclaimer: </b> This test is
-                                only
-                                for public awareness. Thought all efforts have been made to ensure the accuracy
-                                of
-                                the content, the same should not be construed as a statement of low or used for
-                                any
-                                legal purposes. This application accepts no responsibility in relation to the
-                                accuracy, completeness, usefulness or otherwise, of the contents. Users are
-                                advised
-                                to verify/check any information with the Transport Department.
+                                    style="color: #fedf53;">{{ __('footer.disclaimer_title') }}</b> 
+                                    {{ __('footer.disclaimer_text') }}
                             </p>
                             <div class="footer-social-media">
                                 <a href="javascript:void(0)"><i class="fa-brands fa-square-facebook"></i></a>
@@ -34,18 +26,18 @@
                         <div class="row">
                             <div class="col-6 col-md-3">
                                 <div class="footer-nav">
-                                    <h4 class="mb-2 mb-lg-3 theme-color-FEDF53">Navigation</h4>
+                                    <h4 class="mb-2 mb-lg-3 theme-color-FEDF53">{{ __('footer.navigation') }}</h4>
                                     <ul class="footer-navigation mb-0">
-                                        <li><a href="javascript:void(0)">Question Bank</a></li>
-                                        <li><a href="javascript:void(0)">Exam</a></li>
-                                        <li><a href="javascript:void(0)">Settings & Help</a></li>
-                                        <li><a href="javascript:void(0)">Contact Us</a></li>
+                                        <li><a href="javascript:void(0)">{{ __('footer.nav_qbank') }}</a></li>
+                                        <li><a href="javascript:void(0)">{{ __('footer.nav_exam') }}</a></li>
+                                        <li><a href="javascript:void(0)">{{ __('footer.nav_setting') }}</a></li>
+                                        <li><a href="javascript:void(0)">{{ __('footer.nav_contact') }}</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-6 col-md-3">
                                 <div class="contact-info">
-                                    <h4 class="mb-2 mb-lg-3 theme-color-FEDF53">Contact</h4>
+                                    <h4 class="mb-2 mb-lg-3 theme-color-FEDF53">{{ __('footer.contact') }}</h4>
                                     <ul class="contact-us mb-0">
                                         <li><a href="javascript:void(0)">+91 8200362945</a></li>
                                         <li><a href="javascript:void(0)">rutvidevani@gmail.com</a></li>
@@ -55,11 +47,11 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="information-info mb-0">
-                                    <h4 class="mb-3 mb-lg-4 theme-color-FEDF53">Get the latest information</h4>
+                                    <h4 class="mb-3 mb-lg-4 theme-color-FEDF53">{{ __('footer.latest_info') }}</h4>
                                     <div class="postion-reletive w-75 w-md-auto">
                                         <form class="footer-form" name="footer-form" id="footer-form">
                                             <input type="text" class="footer-input theme-color-fff"
-                                                placeholder="Enter Email Address">
+                                                placeholder={{ __('footer.placeholder_email') }}>
                                             <button type="submit"
                                                 class="position-absolute top-0 end-0 bottom-0 border-0">
                                                 <i class="fa-solid fa-arrow-right fs-4 theme-color-fff"></i>
@@ -85,8 +77,7 @@
                 </div>
                 <div class="col-12 col-xl-6">
                     <div class="privacy d-flex justify-content-lg-end justify-content-center">
-                        <a href="javascript:void(0)" class="theme-color-fff fw-300 fs-18px">User Terms & Conditions
-                            | Privacy Policy</a>
+                        <a href="javascript:void(0)" class="theme-color-fff fw-300 fs-18px"> {{ __('footer.privacy') }}</a>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@
                 <a class="navbar-brand" href="javascript:void(0)">
                     <div class="nav-logo d-flex align-items-center">
                         <img src="./assets/image/nav-image.png" alt="nav logo" class="img-fluid logo-image">
-                        RTO EXAM
+                        {{ __('header.brand') }}
                     </div>
                 </a>
                 <button class="navbar-toggler nav-show" type="button" data-bs-toggle="collapse">
@@ -17,25 +17,25 @@
 
                         <li class="nav-item">
                             <a class="nav-link fs-18px  p-0 fw-300 theme-color-161616 {{ request()->is('/') ? 'active' : '' }}" aria-current="page"
-                                href="./">Home</a>
+                                href="./">{{ __('header.home') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fs-18px p-0 fw-300 theme-color-161616 {{ request()->is('questionbank') ? 'active' : '' }}"                            
-                                href="./questionbank">Question Bank</a>
+                                href="./questionbank">{{ __('header.qbank') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fs-18px p-0 fw-300 theme-color-161616 {{ request()->is('exam') ? 'active' : '' }}"                             
-                            href="./exam">Exam</a>
+                            href="./exam">{{ __('header.exam') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fs-18px p-0 fw-300 theme-color-161616  {{ request()->is('setting') ? 'active' : '' }}" 
-                            href="./setting">Setting & Help</a>
+                            href="./setting">{{ __('header.setting') }}</a>
                         </li>
 
                         <div class="language ">
                             <select id="langselect" class="form-select" style="width: 100%;">
-                                <option value="eng">English</option>
-                                <option value="guj">ગુજરાતી</option>
+                                <option value="eng" @if(session()->get('lang') == 'eng') selected @endif >English</option>
+                                <option value="guj" @if(session()->get('lang') == 'guj') selected @endif >ગુજરાતી</option>
                             </select>
                         </div>
                 </div>

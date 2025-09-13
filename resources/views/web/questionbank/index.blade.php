@@ -10,13 +10,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="exam-test-content">
-                        <h1 class="theme-color-fff">RTO EXAM</h1>
-                        <!-- <img src="assets/image/rto-banner-image.png" alt="rto-banner-image" class="img-fluid"> -->
-                        <p class="fs-20px fw-300 mb-0">List of Questions & answer and meaning of road signs</p>
+                        <h1 class="theme-color-fff">{{ __('questionbank.title') }}</h1>
+                        <p class="fs-20px fw-300 mb-0">{{ __('questionbank.subtitle') }}</p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>    </div>
     </section>
 
     <section class="sub-section">
@@ -26,12 +24,12 @@
                     <ul class="nav nav-pills nav-fill gap-3 mb-5 question-nav" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active fw-700" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                                type="button" role="tab" aria-controls="pills-home" aria-selected="true">Questions</button>
+                                type="button" role="tab" aria-controls="pills-home" aria-selected="true">{{ __('questionbank.questions_tab') }}</button>
                         </li>
                         <li class="nav-item nav-secont-item" role="presentation">
                             <button class="nav-link sign-link traffic-content-space" id="profile-tab" data-bs-toggle="tab"
                                 data-bs-target="#profile" type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="true">Traffic Signs</button>
+                                aria-selected="true">{{ __('questionbank.signs_tab') }}</button>
                         </li>
                     </ul>
 
@@ -92,7 +90,7 @@
                             offsetQ += res.count;
                         } else {
                             endReachedQ = true;
-                            const noMoreMsg = $('<div class="col-12 text-center my-3 no-more-msg"><i>No more questions available.</i></div>');
+                            const noMoreMsg = $('<div class="col-12 text-center my-3 no-more-msg"><i>{{ __('questionbank.no_more_questions') }}</i></div>');
                             $("#questionContainer").append(noMoreMsg);
 
                             setTimeout(function () {
@@ -126,7 +124,7 @@
                             offsetS += res.count;
                         } else {
                             endReachedS = true;
-                            const noMoreMsg = $('<div class="col-12 text-center my-3 no-more-msg"><i>No more signs available.</i></div>');
+                            const noMoreMsg = $('<div class="col-12 text-center my-3 no-more-msg"><i>{{ __('questionbank.no_more_signs') }}</i></div>');
                             $("#signsContainer").append(noMoreMsg);
 
                             setTimeout(function () {
@@ -149,7 +147,7 @@
             // Scroll for questions
             $(".scroll-container").on("scroll", function () {
                 let $this = $(this);
-                if ($this.scrollTop() + $this.innerHeight() >= this.scrollHeight - 30) {
+                if ($this.scrollTop() + $this.innerHeight() >= this.scrollHeight - 100) {
                     loadQuestions();
                 }
             });
@@ -160,21 +158,6 @@
                 if ($this.scrollTop() + $this.innerHeight() >= this.scrollHeight - 70) {
                     loadSigns();
                 }
-            });
-
-            // Language change
-            $("#langselect").on("change", function () {
-                language = $(this).val();
-
-                // Reset both sections
-                offsetQ = 0; endReachedQ = false;
-                offsetS = 0; endReachedS = false;
-
-                $("#questionContainer").empty();
-                $("#signsContainer").empty();
-
-                loadQuestions();
-                loadSigns();
             });
         });
 

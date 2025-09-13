@@ -8,7 +8,7 @@
                     <p class="fs-18px theme-color-54595f fw-300 mb-0">{{ $q->question }}</p>
                 </div>
                 <div class="content-body second-content d-flex gap-2 align-items-center">
-                    <span class="start-content text-center start-alpha fs-18px">Ans</span>
+                    <span class="start-content text-center start-alpha fs-18px">{{ __('questionbank.ans') }}</span>
                     <p class="fs-18px fw-300 theme-color-54595f mb-0">{{ $q->answer }}</p>
                 </div>
             </div>

@@ -8,17 +8,17 @@ use Illuminate\Http\Request;
 
 class Examcontroller extends Controller
 {
-    public function view(Request $request)
-    {
-      $lang = $request->get('lang', 'eng');
+  public function view(Request $request)
+  {
+    $lang = session()->get('lang', 'eng');
 
-        // Get 15 random questions
-        $questions = Question::where('lang',$lang)
-        ->inRandomOrder()
-        ->limit(5)
-        ->get();
+    // Get 15 random questions
+    $questions = Question::where('lang', $lang)
+      ->inRandomOrder()
+      ->limit(5)
+      ->get();
 
-        return view('web.exam.index', compact('questions','lang'));
-    }
-   
+    return view('web.exam.index', compact('questions'));
+  }
+
 }

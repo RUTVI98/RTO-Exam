@@ -323,8 +323,8 @@
                     $(".result-section").show();
                     $(".ScoreBoard-section").hide();
 
-                    $("#correct_answer").text("Correct Answers: " + correctCount);
-                    $("#wrong_answer").text("Wrong Answers: " + wrongCount);
+                    $("#correct_answer").text("{{ __('exam.correct_answers') }}"  + correctCount);
+                    $("#wrong_answer").text("{{ __('exam.wrong_answers') }}" + wrongCount);
 
                     if (correctCount >= 11) {
                         $("#passed-text").show();
@@ -411,46 +411,6 @@
             // hide result section initially
             $(".result-section").hide();
 
-            $("#langselect").on("change", function () {
-                let language = $(this).val();
-
-                $.ajax({
-                    url: "{{ route('exam') }}",
-                    data: { lang: language },
-                    success: function (response) {
-
-                        // Replace the old quiz HTML with the new one from response
-                        $(".quiz-section").html($(response).find(".quiz-section").html());
-                        $(".start-section").html($(response).find(".start-section").html());
-                        $(".question-section").html($(response).find(".question-section").html());
-                        $(".result-section").html($(response).find(".result-section").html());
-                        $(".ScoreBoard-section").html($(response).find(".ScoreBoard-section").html());
-
-                        
-                        $(".quiz-section").hide();
-                        $(".start-section").show();
-                        $(".ScoreBoard-section").hide();
-                        $(".result-section").hide();
-
-                        currentIndex = 0;
-                        correctCount = 0;
-                        wrongCount = 0;
-                        scoreboardData = [];
-
-                        $("#scoreboard-text").empty();
-
-                        $(".true-answer-counter").text(0);
-                        $(".wrong-answer-counter").text(0);
-
-                        $("input[type=radio]").prop("checked", false);
-
-                        $(".quiz-card[data-correct]").hide();
-                        $(".quiz-card[data-correct]").eq(currentIndex).show();
-
-
-                    }
-                });
-            });
         });
 
     </script>
