@@ -11,13 +11,11 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-lg-6">
                         <div class="heading-text text-lg-start text-center">
-                            <h1 class="mb-3 mb-md-4 theme-color-fff">Test yourself before appearing in Driving Licence
-                                Test!</h1>
+                            <h1 class="mb-3 mb-md-4 theme-color-fff"><h1 class="theme-color-fff">{{ __('home.banner_title') }}</h1></h1>
                             <!-- <img src="assets/image/heading-image.png" alt="heading-image" class="img-fluid heading-image"> -->
-                            <p class="mb-3 mb-md-4 mb-lg-5">Available for major states of India in english, Hindi and
-                                native languages.</p>
+                            <p class="mb-3 mb-md-4 mb-lg-5">{{ __('home.banner_subtitle') }}</p>
                             <button class="btn nav-btn heading-button" type="submit">
-                                <a href="javascript:void(0)" class="theme-color-FEDF53 fs-18px">Start Exam</a>
+                                <a href="{{route('exam') }}" class="theme-color-FEDF53 fs-18px">{{__('home.start_exam')}}</a>
                             </button>
                         </div>
                     </div>
@@ -55,7 +53,7 @@
                 <div class="col-12 col-lg-3 col-md-6 ">
                     <div class="feature-card theme-bg-FEDF53 position-relative overflow-hidden">
                         <div class="feature-card-body">
-                            <h4 class="my-0 theme-color-161616">Awesome Features</h4>
+                            <h4 class="my-0 theme-color-161616">{{__('home.features')}}</h4>
                         </div>
                     </div>
                 </div>
@@ -68,15 +66,14 @@
                                 <img src="assets/image/feature-section-shape1.png" alt="feature-section-shape1"
                                     class="img-fluid  feature-section-shape1">
                             </div>
-                            <a href="javascript:void(0)" class="circle">
+                            <a href="{{ route('questionbank') }}" class="circle">
                                 <div class="circle-1"><i class="fa-solid fa-arrow-right theme-color-fff"></i></div>
                             </a>
                             <div class="card-content">
                                 <a href="javascript:void(0)">
                                     <h6 class="mb-2 theme-color-F4BF00">01</h6>
-                                    <h4 class="mb-2 fs-20px fw-500 theme-color-161616">Question Bank</h4>
-                                    <p class="fs-16px theme-color-54595f fw-300">List of questions & answers and meaning
-                                        of road signs...</p>
+                                    <h4 class="mb-2 fs-20px fw-500 theme-color-161616">{{__('home.questionbank_title')}}</h4>
+                                    <p class="fs-16px theme-color-54595f fw-300">{{__('home.questionbank_text')}}</p>
                                 </a>
                             </div>
                         </div>
@@ -91,15 +88,14 @@
                                 <img src="assets/image/feature-section-shape1.png" alt="feature-section-shape1"
                                     class="img-fluid feature-section-shape1">
                             </div>
-                            <a href="javascript:void(0)" class="circle">
+                            <a href="{{route('exam')}}" class="circle">
                                 <div class="circle-1"><i class="fa-solid fa-arrow-right theme-color-fff"></i></div>
                             </a>
                             <div class="card-content">
                                 <a href="javascript:void(0)">
                                     <h6 class="mb-2 theme-color-F4BF00">02</h6>
-                                    <h4 class="mb-2 fs-20px fw-500 theme-color-161616">Exam</h4>
-                                    <p class="fs-16px theme-color-54595f fw-300">Time and Questions bound test exactly
-                                        same as...</p>
+                                    <h4 class="mb-2 fs-20px fw-500 theme-color-161616">{{__('home.exam_title')}}</h4>
+                                    <p class="fs-16px theme-color-54595f fw-300">{{__('home.exam_text')}}</p>
                                 </a>
                             </div>
                         </div>
@@ -113,15 +109,14 @@
                                 <img src="assets/image/feature-section-shape1.png" alt="feature-section-shape1"
                                     class="img-fluid feature-section-shape1">
                             </div>
-                            <a href="javascript:void(0)" class="circle">
+                            <a href="{{route('setting')}}" class="circle">
                                 <div class="circle-1"><i class="fa-solid fa-arrow-right theme-color-fff"></i></div>
                             </a>
                             <div class="card-content">
                                 <a href="javascript:void(0)">
                                     <h6 class="mb-2 theme-color-F4BF00">03</h6>
-                                    <h4 class="mb-2 fs-20px fw-500 theme-color-161616">Setting & Help</h4>
-                                    <p class="fs-16px theme-color-54595f fw-300">Forms, RTO office information and
-                                        more...</p>
+                                    <h4 class="mb-2 fs-20px fw-500 theme-color-161616">{{__('home.settings_title')}}</h4>
+                                    <p class="fs-16px theme-color-54595f fw-300">{{__('home.settings_text')}}</p>
                                 </a>
                             </div>
                         </div>
@@ -230,11 +225,9 @@
                     <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-xxl-start">
                         <div class="subheading postion-reletive">
                             <div class="card-img">
-                                <h1 class="mb-3 mb-lg-4 theme-color-161616">Learning Licence test <br> made easy!</h1>
+                                <h1 class="mb-3 mb-lg-4 theme-color-161616">{!! __('home.app_title') !!}</h1>
                             </div>
-                            <p class="fs-16px fw-300 theme-color-54595f mb-3 mb-lg-4">Download our free RTO Exam App and
-                                Increase your <br> success chances in learning licence
-                                test.</p>
+                            <p class="fs-16px fw-300 theme-color-54595f mb-3 mb-lg-4">{{__('home.app_text')}}</p>
 
                             <div class="app-download-button d-flex align-items-center gap-3">
                                 <a href="javascript:void(0)" class="d-flex gap-2 play-button2  position-relative p-2">
