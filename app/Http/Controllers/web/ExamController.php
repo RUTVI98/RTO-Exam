@@ -15,7 +15,7 @@ class Examcontroller extends Controller
     // Get 15 random questions
     $questions = Question::where('lang', $lang)
       ->inRandomOrder()
-      ->limit(5)
+      ->limit(15)
       ->get();
 
     return view('web.exam.index', compact('questions'));

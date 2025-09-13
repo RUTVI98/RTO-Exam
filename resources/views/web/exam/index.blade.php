@@ -248,7 +248,7 @@
             let currentIndex = 0;
             let totalQuestions = $(".quiz-card[data-correct]").length;
             let timer;
-            let timeleft = 2;
+            let timeleft = 30;
             let correctCount = 0;
             let wrongCount = 0;
             let scoreboardData = [];
