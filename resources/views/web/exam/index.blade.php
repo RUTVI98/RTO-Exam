@@ -293,7 +293,7 @@
                 scoreboardData.push({
                     question: questionText,
                     correct: correctAnswer,
-                    user: selected ? selected : "Not Answered",
+                    user: selected ? selected : "{{ __('exam.not_selected') }}" ,
                     image: img
                 });
 
@@ -347,7 +347,7 @@
                 scoreboardData.forEach((item, index) => {
                     let icon, colorClass;
 
-                    if (item.user === "Not Answered") {
+                    if (item.user === "{{ __('exam.not_selected') }}") {
                         icon = "❓";        // not answered
                         colorClass = "text-warning";
                     } else if (item.user === item.correct) {
