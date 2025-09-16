@@ -2,7 +2,7 @@
 return [
 
     'banner_title' => 'Test yourself before appearing in Driving Licence Test!',
-    'banner_subtitle' => 'Available for gujrat state of India in English and native gujrati languages.',
+    'banner_subtitle' => 'Available for gujarat state of India in English and native gujarati languages.',
     'start_exam' => 'Start Exam',
 
     'features' => 'Awesome Features',
