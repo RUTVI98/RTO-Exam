@@ -457,34 +457,42 @@
                                 aria-labelledby="v-pills-messages-tab">
                                 <div class="accordion accordion-flush setting-form" id="accordionFlushExample">
                                     <div class="start-form">
-                                        <h4 class="fs-4 theme-color-161616 pb-3 border-bottom">{{__('setting.rto_office')}}
+                                        <h4 class="fs-4 theme-color-161616 pb-3 border-bottom">
+                                            {{ __('setting.rto_office') }}
                                         </h4>
                                     </div>
 
-                                    <div class="accordion-item form-details">
-                                        <h2 class="accordion-header" id="flush-heading1">
-                                            <button class="accordion-button form-button" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapse1"
-                                                aria-expanded="true" aria-controls="flush-collapse1">
-                                                GJ01 - Ahmedabad
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapse1" class="accordion-collapse form-body-space collapse show"
-                                            aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body form-body">
-                                                <div class="form-body-details first-form-detail">
-                                                    <a href="javascript:void(0)" class="application-form"><i
-                                                            class="fa-solid fa-location-dot"></i>RTO Ahmedabad, Subhash
-                                                        Bridge, Sastri Nagar, Hridaya Kunj, Road, Ahmedabad, Gujarat
-                                                        380027</a>
-                                                </div>
-                                                <div class="form-body-details">
-                                                    <a href="javascript:void(0)" class="application-form"><i
-                                                            class="fa-solid fa-phone"></i>079-27559696</a>
+                                    @foreach($rtoOffices as $index => $office)
+                                        <div class="accordion-item form-details">
+                                            <h2 class="accordion-header" id="flush-heading{{ $index }}">
+                                                <button class="accordion-button form-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $index }}"
+                                                    aria-expanded="false" aria-controls="flush-collapse{{ $index }}">
+                                                    {{ $office->stateCode }} - {{ $office->stateName }}
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapse{{ $index }}"
+                                                class="accordion-collapse form-body-space collapse"
+                                                aria-labelledby="flush-heading{{ $index }}"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body form-body">
+                                                    <div class="form-body-details first-form-detail">
+                                                        <a href="javascript:void(0)" class="application-form">
+                                                            <i class="fa-solid fa-location-dot"></i>
+                                                            {{ $office->officeAddress }}
+                                                        </a>
+                                                    </div>
+                                                    <div class="form-body-details">
+                                                        <a href="javascript:void(0)" class="application-form">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                            {{ $office->contact }}
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endforeach
+
                                 </div>
                             </div>
 
