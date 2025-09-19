@@ -4,6 +4,7 @@ use App\Http\Controllers\web\ExamController;
 use App\Http\Controllers\web\HomeController;
 use App\Http\Controllers\web\QuestionbankController;
 use App\Http\Controllers\web\SettingController;
+use App\Http\Controllers\web\ContactController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -33,5 +34,7 @@ Route::middleware('lang')->group(function () {
         session()->put('lang',$lang);
         return redirect()->back();
     })->name('set-locale');
+
+    Route::post('/contact/send', [ContactController::class, 'sendcontact'])->name('contact_send');
 
 });

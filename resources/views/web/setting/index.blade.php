@@ -19,21 +19,16 @@
         </div>
     </section>
 
-    <section class="message-section" id="#">
+    <section class="message-section" id="message-section" style="display: none;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="success-message" id="success-message">
-                        <div class="success-container">
-                            <p class="success-text fw-300">{{ __('setting.message_sent') }}</p>
+                        <div class="alert alert-success">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- success message box -->
     </section>
 
     <section class="contact-section">
@@ -292,7 +287,7 @@
                                                     <div class="licence-information">
                                                         <ul class="mb-0">
                                                             @foreach(__('setting.exam_rules') as $point)
-                                                                 <li>{!! $point !!}</li>
+                                                                <li>{!! $point !!}</li>
                                                             @endforeach
                                                         </ul>
                                                     </div>
@@ -346,7 +341,8 @@
                                                         </ul>
                                                     </div>
                                                     <p class="fs-18px theme-color-161616 fw-700">
-                                                        {{ __('setting.hazardous_goods') }}</p>
+                                                        {{ __('setting.hazardous_goods') }}
+                                                    </p>
                                                     <div class="licence-information">
                                                         <ul class="mb-0">
                                                             @foreach(__('setting.hazardous_points') as $point)
@@ -373,9 +369,9 @@
                                                 <div class=" pb-0 first-form-detail">
                                                     <div class="licence-information">
                                                         <ul class="mb-0">
-                                                         @foreach(__('setting.renewal_info') as $point)
-                                                            <li>{{ $point }}</li>
-                                                         @endforeach
+                                                            @foreach(__('setting.renewal_info') as $point)
+                                                                <li>{{ $point }}</li>
+                                                            @endforeach
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -387,7 +383,7 @@
                                             <button class="accordion-button collapsed form-button" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
                                                 aria-expanded="false" aria-controls="flush-collapseFour">
-                                                 {{ __('setting.change_title') }}
+                                                {{ __('setting.change_title') }}
                                             </button>
                                         </h2>
                                         <div id="flush-collapseFour" class="accordion-collapse collapse form-body-space"
@@ -410,7 +406,7 @@
                                             <button class="accordion-button collapsed form-button" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
                                                 aria-expanded="false" aria-controls="flush-collapseFive">
-                                                {{ __('setting.intl_licence_title') }}  
+                                                {{ __('setting.intl_licence_title') }}
                                             </button>
                                         </h2>
                                         <div id="flush-collapseFive" class="accordion-collapse collapse form-body-space"
@@ -433,20 +429,22 @@
                                             <button class="accordion-button collapsed form-button" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
                                                 aria-expanded="false" aria-controls="flush-collapseSix">
-                                                  {{ __('setting.accordion_title') }}
+                                                {{ __('setting.accordion_title') }}
                                             </button>
                                         </h2>
                                         <div id="flush-collapseSix" class="accordion-collapse collapse form-body-space"
                                             aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body form-body">
                                                 <div class="pb-0 first-form-detail">
-                                                    <p class="fs-18px theme-color-161616 fw-700">{{ __('setting.accordion_text') }}.</p>
+                                                    <p class="fs-18px theme-color-161616 fw-700">
+                                                        {{ __('setting.accordion_text') }}.
+                                                    </p>
                                                     <div class="licence-information">
                                                         <ul class="mb-0">
-                                                            @foreach (__('setting.info') as $point )
-                                                                 <li>{{ $point }}</li>
+                                                            @foreach (__('setting.info') as $point)
+                                                                <li>{{ $point }}</li>
                                                             @endforeach
-                                                           
+
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -459,7 +457,8 @@
                                 aria-labelledby="v-pills-messages-tab">
                                 <div class="accordion accordion-flush setting-form" id="accordionFlushExample">
                                     <div class="start-form">
-                                        <h4 class="fs-4 theme-color-161616 pb-3 border-bottom">{{__('setting.rto_office')}}</h4>
+                                        <h4 class="fs-4 theme-color-161616 pb-3 border-bottom">{{__('setting.rto_office')}}
+                                        </h4>
                                     </div>
 
                                     <div class="accordion-item form-details">
@@ -493,32 +492,40 @@
                                 aria-labelledby="v-pills-settings-tab">
                                 <div class="accordion accordion-flush setting-form" id="accordionFlushExample">
                                     <div class="start-form">
-                                        <h4 class="pb-3 theme-color-161616 border-bottom fs-4">{{__('setting.contact_us')}}</h4>
+                                        <h4 class="pb-3 theme-color-161616 border-bottom fs-4">
+                                            {{ __('setting.contact_us') }}
+                                        </h4>
                                     </div>
                                     <div class="accordion-item form-details">
-                                        <form class="contact-form" name="contact-form" id="contact-form">
+                                        <form class="contact-form" name="contact-form" id="contact-form"
+                                            action="{{ route('contact_send') }}" method="POST">
+                                            @csrf
                                             <div class="container">
                                                 <div class="row gap-y-20px">
                                                     <div class="col-sm-6 col-12">
                                                         <div class="address-info">
-                                                            <label class="name" for="Name">{{__('setting.name')}}</label>
-                                                            <input type="text" name="name" placeholder="{{__('setting.name_text')}}"
-                                                                class="contact-input">
+                                                            <label class="name" for="name">{{ __('setting.name') }}</label>
+                                                            <input type="text" name="name"
+                                                                placeholder="{{ __('setting.name_text') }}"
+                                                                class="contact-input" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6 col-12">
                                                         <div class="address-info">
-                                                            <label for="email" class="name">{{__('setting.email')}}</label>
-                                                            <input type="text" name="email" placeholder="{{__('setting.email_text')}}"
-                                                                class="contact-input">
+                                                            <label for="email"
+                                                                class="name">{{ __('setting.email') }}</label>
+                                                            <input type="email" name="email"
+                                                                placeholder="{{ __('setting.email_text') }}"
+                                                                class="contact-input" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6 col-12">
                                                         <div class="contact-us">
                                                             <div class="address-info">
-                                                                <label for="mobileno" class="name">{{__('setting.mobile_no')}}</label>
+                                                                <label for="mobileno"
+                                                                    class="name">{{ __('setting.mobile_no') }}</label>
                                                                 <input type="number" name="mobile_no"
-                                                                    placeholder="{{__('setting.mobile_text')}}"
+                                                                    placeholder="{{ __('setting.mobile_text') }}"
                                                                     class="contact-input">
                                                             </div>
                                                         </div>
@@ -526,25 +533,29 @@
                                                     <div class="col-sm-6 col-12">
                                                         <div class="contact-us">
                                                             <div class="address-info">
-                                                                <label for="cityname" class="name">{{__('setting.city')}}</label>
-                                                                <input type="text" name="city" placeholder="{{__('setting.city_text')}}"
+                                                                <label for="cityname"
+                                                                    class="name">{{ __('setting.city') }}</label>
+                                                                <input type="text" name="city"
+                                                                    placeholder="{{ __('setting.city_text') }}"
                                                                     class="contact-input">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="address-info">
-                                                            <label for="message" class="name">{{__('setting.message')}}</label>
+                                                            <label for="message"
+                                                                class="name">{{ __('setting.message') }}</label>
                                                             <textarea name="message" cols="30" rows="5"
-                                                                placeholder="{{__('setting.message_text')}}"
-                                                                class="contact-input"></textarea>
+                                                                placeholder="{{ __('setting.message_text') }}"
+                                                                class="contact-input" required></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
-                                                        <form class="submit-button">
-                                                            <a href="javascript:void()" type="button"
-                                                                class="r-submit">{{__('setting.submit')}}</a>
-                                                        </form>
+                                                        <div class="submit-button">
+                                                            <button type="submit" class="r-submit">
+                                                                {{ __('setting.submit') }}
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -556,7 +567,8 @@
                                 aria-labelledby="v-pills-disclaimer-tab">
                                 <div class="accordion accordion-flush setting-form" id="accordionFlushExample">
                                     <div class="start-form">
-                                        <h4 class="pb-3 theme-color-161616 border-bottom fs-4">{{__('setting.disclaimer')}}</h4>
+                                        <h4 class="pb-3 theme-color-161616 border-bottom fs-4">{{__('setting.disclaimer')}}
+                                        </h4>
                                     </div>
                                     <div class="accordion-item form-details last-form-detail">
                                         <div id="flush-collapseOne" class="accordion-collapse collapse form-body-space pb-0"
@@ -574,3 +586,94 @@
     </section>
     <!-- setting and help section end -->
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function () {
+            $('#contact-form').validate({
+                rules: {
+                    name: { required: true, minlength: 2, maxlength: 100 },
+                    email: { required: true, email: true },
+                    mobile_no: { digits: true, minlength: 10, maxlength: 10 },
+                    message: { required: true, minlength: 5, maxlength: 250 }
+                },
+                messages: {
+                    name: {
+                        required: "Please enter your full name",
+                        minlength: "Name must have at least 2 characters",
+                        maxlength: "Name must not exceed 100 characters"
+                    },
+                    email: {
+                        required: "Please enter your email",
+                        email: "Enter a valid email"
+                    },
+                    mobile_no: {
+                        digits: "Only numbers are allowed",
+                        minlength: "Mobile number must be exactly 10 digits",
+                        maxlength: "Mobile number must be exactly 10 digits"
+                    },
+                    message: {
+                        required: "Please enter your message",
+                        minlength: "Message must have at least 5 characters",
+                        maxlength: "Message must not exceed 250 characters"
+                    }
+                },
+                errorPlacement: function (error, element) {
+                    error.insertAfter(element);
+                },
+                submitHandler: function (form, event) {
+                    event.preventDefault();
+
+                    const formData = new FormData(form);
+
+                    $.ajax({
+                        url: "{{ route('contact_send') }}",
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        success: function (response) {
+                            if (response.status) {
+                                // Fill the alert text with success message from server
+                                $('#success-message').text(response.message);
+
+                                // Show the success message section with fade-in effect
+                                $('#message-section')
+                                    .fadeIn();
+
+                                // Reset the form
+                                $('#contact-form')[0].reset();
+
+                                // Hide message after 3 seconds
+                                setTimeout(function () {
+                                    $('#message-section').fadeOut();
+                                }, 3000);
+                            } else {
+                                alert("Something went wrong. Please try again.");
+                            }
+                        },
+                        error: function (xhr) {
+                            let message = "An error occurred.";
+                            if (xhr.status === 400 || xhr.status === 422) {
+                                const errors = xhr.responseJSON?.error || xhr.responseJSON?.errors;
+                                if (typeof errors === 'object') {
+                                    message = Object.values(errors).flat().join("\n");
+                                } else {
+                                    message = errors || "Invalid input.";
+                                }
+                            } else if (xhr.status === 401) {
+                                message = "Unauthorized action.";
+                            } else if (xhr.status === 500) {
+                                message = "Internal server error. Please try again later.";
+                            }
+                            alert(message);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+@endpush
