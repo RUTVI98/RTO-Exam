@@ -89,39 +89,39 @@
                                             aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body form-body">
                                                 <div class="form-body-details first-form-detail">
-                                                    <a href="#"
+                                                    <a href="{{ asset('assets/forms/form_1.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_1') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_1A.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_1a') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_2.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_2') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_4.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_4') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_8.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_8') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_9.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_9') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/lld.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_lld') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/tva.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_tva') }}</a>
                                                 </div>
                                                 <div class="form-body-details last-form-detail">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form4a.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_idp') }}</a>
                                                 </div>
                                             </div>
@@ -139,50 +139,50 @@
                                             aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body form-body">
                                                 <div class="form-body-details first-form-detail">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_20.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">
                                                         {{ __('setting.form_20') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_25.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_25') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_26.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_26') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_29.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_29') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_30.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_30') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_34.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_34') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/form_35.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_35') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/mt.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_mt') }}
                                                     </a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/nt.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_nt') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/ft.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_ft') }}
                                                     </a>
                                                 </div>
                                                 <div class="form-body-details last-form-detail">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/CNA-Form.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_cna') }}</a>
                                                 </div>
                                             </div>
@@ -200,15 +200,15 @@
                                             aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body form-body">
                                                 <div class="form-body-details first-form-detail">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/ptema.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_ptema') }}</a>
                                                 </div>
                                                 <div class="form-body-details">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/ppuca.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_ppuca') }}</a>
                                                 </div>
                                                 <div class="form-body-details last-form-detail">
-                                                    <a href="#" target="_blank"
+                                                    <a href="{{ asset('assets/forms/pcopa.pdf') }}" target="_blank"
                                                         class="theme-color-161616 fs-16px link-161616-theme">{{ __('setting.form_pcopa') }}</a>
                                                 </div>
                                             </div>

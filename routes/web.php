@@ -6,7 +6,7 @@ use App\Http\Controllers\web\QuestionbankController;
 use App\Http\Controllers\web\SettingController;
 use App\Http\Controllers\web\ContactController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
+use App\Http\Controllers\web\NewsletterController;
 
 Route::middleware('lang')->group(function () {
     Route::controller(HomeController::class)->group(function () {
@@ -36,5 +36,7 @@ Route::middleware('lang')->group(function () {
     })->name('set-locale');
 
     Route::post('/contact/send', [ContactController::class, 'sendcontact'])->name('contact_send');
+
+    Route::post('/newsletter/store', [NewsletterController::class, 'store'])->name('newsletter_store');
 
 });
