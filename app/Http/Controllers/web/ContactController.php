@@ -7,6 +7,7 @@ use App\Mail\ContactMail;
 use App\response;
 use Exception;
 use Illuminate\Http\Request;
+use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
@@ -29,6 +30,13 @@ class ContactController extends Controller
             return $this->validatorerror($validator->errors());
         }
 
+    Contact::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'mobile_no' => $request->mobile_no,
+        'city' => $request->city,
+        'message' => $request->message,
+    ]); 
         $details = [
             'name' => $request->name,
             'email' => $request->email,
